@@ -1,0 +1,15 @@
+{
+    "plugins": [
+    "compat"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {    
+    "compat/compat": 2   
+    },
+    "env": {
+        "jest": true
+    }    
+}
