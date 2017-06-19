@@ -1,6 +1,6 @@
 import compression from 'compression';
 import express from 'express';
-import ExpressWrapper, {anonymousFunction} from './index'
+import ExpressWrapper, {anonymousFunction} from './serverWrapper'
 import { APP_NAME, STATIC_PATH, WEB_PORT } from '../shared/config'
 
 const mockUse = jest.fn();

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node src/index.js",
+    "start": "npm run dev:start",
+    "dev:start": "babel-node src/server",
     "test": "eslint src && jest src --coverage"
   },
   "browserslist": [
