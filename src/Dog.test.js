@@ -2,7 +2,7 @@ import Dog from './dog';
 import color from 'color';
 
 const mockColorFunc = jest.fn(() => console.log(1));
-const mockColor = 
+const mockColorFunc2 = jest.fn(() => console.log(2));
 jest.mock('color', () => {
     return function(){
         return{
@@ -11,8 +11,11 @@ jest.mock('color', () => {
     }
 });
 
+color.something = mockColorFunc2;
+
 test('Dog.Bark', () =>{    
     const testDog = new Dog('Test');
     expect(testDog.bark()).toBe('Wah wah, I am Test');
-    expect(mockColorFunc.hex).toHaveBeenCalledWith(1);
+    expect(mockColorFunc).toHaveBeenCalled();
+    expect(mockColorFunc2).toHaveBeenCalledWith(3);
 })

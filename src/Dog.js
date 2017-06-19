@@ -7,6 +7,8 @@ class Dog{
 
     bark(){
         color().hex(1);
+        color.something(3);
+        console.log(color.something);
         return `Wah wah, I am ${this.name}`;
     }
 }
